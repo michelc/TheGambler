@@ -21,5 +21,5 @@ get "/chifoumi" do
 
   # Envoie le coup à l'arbitre
   url = "#{arbitre}?Game=#{partie}&MoveId=#{tour}&Value=#{coup}"
-  # open(url).read.size
+  open(url).read.size
 end
