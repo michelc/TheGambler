@@ -5,6 +5,10 @@ require "open-uri"
 
 require "sinatra/reloader" if development?
 
+get "/" do
+  "Moteur de jeu développé pour participer au concours tournoyons.developpez.com"
+end
+
 get "/chifoumi" do
 
   # Récupération des données
@@ -13,7 +17,7 @@ get "/chifoumi" do
   arbitre = params[:Referee]  # URL pour répondre à l'arbitre
 
   # Calcul du coup à jouer
-  coup = rand(1..3)
+  coup = 1
 
   # Envoie le coup à l'arbitre
   url = "#{arbitre}?Game=#{partie}&MoveId=#{tour}&Value=#{coup}"
