@@ -17,7 +17,7 @@ get "/chifoumi" do
   arbitre = params[:Referee]  # URL pour répondre à l'arbitre
 
   # Calcul du coup à jouer
-  coup = 1
+  coup = rand(1..3)
 
   # Envoie le coup à l'arbitre
   url = "#{arbitre}?Game=#{partie}&MoveId=#{tour}&Value=#{coup}"
